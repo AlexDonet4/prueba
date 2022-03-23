@@ -46,7 +46,7 @@ public class Alimentos {
 		frame.getContentPane().setLayout(null);
 		
 		JList list = new JList();
-		list.setBounds(73, 136, 382, 285);
+		list.setBounds(68, 66, 382, 285);
 		frame.getContentPane().add(list);
 	}
 }
