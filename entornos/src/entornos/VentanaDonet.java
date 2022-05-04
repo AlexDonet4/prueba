@@ -506,17 +506,23 @@ public class VentanaDonet {
 		frame.getContentPane().add(textFieldTotalSal);
 		
 		
-		
-		
-		
-		
-		
 		JButton btnCalcular = new JButton("Calcular");
 		btnCalcular.addMouseListener(new MouseAdapter() {
+			
+			public double calcularimc() {
+				double imc=Double.valueOf(txtFieldPeso.getText())/(Double.valueOf(textFieldAltura.getText())*Double.valueOf(textFieldAltura.getText()));
+				return imc;	
+			}
+			
+			
 			@Override
+		
 			public void mouseClicked(MouseEvent e) {
+				
+				
 			
 				double totalgrasas=0,totalazucar=0,totalsal=0,totalcalorias=0,caloriasrecomendadas=0,totalcaloriasrecomendadas=0,totalimc=0;
+				
 				
 				if (comboBoxSexo.getSelectedItem().equals("Hombre")) {
 					caloriasrecomendadas=24*1*Double.valueOf(txtFieldPeso.getText());
@@ -525,24 +531,29 @@ public class VentanaDonet {
 					caloriasrecomendadas=24*0.9*Double.valueOf(txtFieldPeso.getText());
 				}
 				
+				switch(String.valueOf(comboBoxEjercicio.getSelectedItem())) {
+					case "Sedentario":
+						totalcaloriasrecomendadas=caloriasrecomendadas*1.2;
+						break;
+					case "Actividad ligera":
+						totalcaloriasrecomendadas=caloriasrecomendadas*1.375;
+						break;
+					case "Actividad moderada":
+						totalcaloriasrecomendadas=caloriasrecomendadas*1.55;
+						break;
+					case "Actividad intensa":
+						totalcaloriasrecomendadas=caloriasrecomendadas*1.725;
+						break;
+					case "Actividad muy intensa":
+						totalcaloriasrecomendadas=caloriasrecomendadas*1.9;
+						break;
+									
+				}
 				
-				if(comboBoxEjercicio.getSelectedItem().equals("Sedentario")) {
-					totalcaloriasrecomendadas=caloriasrecomendadas*1.2;
-				}
-				else if(comboBoxEjercicio.getSelectedItem().equals("Actividad ligera")) {
-					totalcaloriasrecomendadas=caloriasrecomendadas*1.375;
-				}
-				else if(comboBoxEjercicio.getSelectedItem().equals("Actividad moderada")) {
-					totalcaloriasrecomendadas=caloriasrecomendadas*1.55;}
-				else if(comboBoxEjercicio.getSelectedItem().equals("Actividad intensa")) {
-					totalcaloriasrecomendadas=caloriasrecomendadas*1.725;}
-				else {
-					totalcaloriasrecomendadas=caloriasrecomendadas*1.9;
-				}
+				
 				
 				lblNumerocaloriasrecomendadas.setText(String.valueOf(totalcaloriasrecomendadas));
-				
-				totalimc=Double.valueOf(txtFieldPeso.getText())/(Double.valueOf(textFieldAltura.getText())*Double.valueOf(textFieldAltura.getText()));
+				totalimc=this.calcularimc();
 				lblImctotal.setText(String.valueOf(totalimc));
 				
 				
