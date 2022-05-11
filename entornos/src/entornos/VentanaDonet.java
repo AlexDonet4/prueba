@@ -514,7 +514,6 @@ public class VentanaDonet {
 				return imc;	
 			}
 			
-			
 			@Override
 		
 			public void mouseClicked(MouseEvent e) {
@@ -560,11 +559,67 @@ public class VentanaDonet {
 				
 				
 			for (int i=0;i<arrayAlimentos.size();i++) {
-				totalgrasas=totalgrasas+arrayAlimentos.get(i).getGrasas();
-				totalazucar=totalazucar+arrayAlimentos.get(i).getAzucar();
-				totalsal=totalsal+arrayAlimentos.get(i).getSal();
-				totalcalorias=totalcalorias+arrayAlimentos.get(i).getCalorias();}
-			
+				switch (i) {
+					case 0:
+						if (checkboxPrimerAlimento.isSelected()) {
+							double cantidadPorcentaje1=Double.valueOf(textFieldCantidad1.getText())/100;
+							totalgrasas=totalgrasas+arrayAlimentos.get(i).getGrasas()*cantidadPorcentaje1;
+							totalazucar=totalazucar+arrayAlimentos.get(i).getAzucar()*cantidadPorcentaje1;
+							totalsal=totalsal+arrayAlimentos.get(i).getSal()*cantidadPorcentaje1;
+							totalcalorias=totalcalorias+arrayAlimentos.get(i).getCalorias()*cantidadPorcentaje1;
+							break;
+						}
+						else {
+							break;
+						}
+					case 1:
+						if (checkboxSegundoAlimento.isSelected()) {
+						double cantidadPorcentaje2=Double.valueOf(textFieldCantidad2.getText())/100;
+						totalgrasas=totalgrasas+arrayAlimentos.get(i).getGrasas()*cantidadPorcentaje2;
+						totalazucar=totalazucar+arrayAlimentos.get(i).getAzucar()*cantidadPorcentaje2;
+						totalsal=totalsal+arrayAlimentos.get(i).getSal()*cantidadPorcentaje2;
+						totalcalorias=totalcalorias+arrayAlimentos.get(i).getCalorias()*cantidadPorcentaje2;
+						break;
+						}
+						else {
+							break;
+						}
+					case 2:
+						if (checkboxTercerAlimento.isSelected()) {
+						double cantidadPorcentaje3=Double.valueOf(textFieldCantidad3.getText())/100;
+						totalgrasas=totalgrasas+arrayAlimentos.get(i).getGrasas()*cantidadPorcentaje3;
+						totalazucar=totalazucar+arrayAlimentos.get(i).getAzucar()*cantidadPorcentaje3;
+						totalsal=totalsal+arrayAlimentos.get(i).getSal()*cantidadPorcentaje3;
+						totalcalorias=totalcalorias+arrayAlimentos.get(i).getCalorias()*cantidadPorcentaje3;
+						break;}
+						else {
+							break;
+						}
+					case 3:
+						if (checkboxCuartoAlimento.isSelected()) {
+						double cantidadPorcentaje4=Double.valueOf(textFieldCantidad4.getText())/100;
+						totalgrasas=totalgrasas+arrayAlimentos.get(i).getGrasas()*cantidadPorcentaje4;
+						totalazucar=totalazucar+arrayAlimentos.get(i).getAzucar()*cantidadPorcentaje4;
+						totalsal=totalsal+arrayAlimentos.get(i).getSal()*cantidadPorcentaje4;
+						totalcalorias=totalcalorias+arrayAlimentos.get(i).getCalorias()*cantidadPorcentaje4;
+						break;}
+						else {
+							break;
+						}
+					case 4:
+						if (checkboxQuintoAlimento.isSelected()) {
+						double cantidadPorcentaje5=Double.valueOf(textFieldCantidad4.getText())/100;
+						totalgrasas=totalgrasas+arrayAlimentos.get(i).getGrasas()*cantidadPorcentaje5;
+						totalazucar=totalazucar+arrayAlimentos.get(i).getAzucar()*cantidadPorcentaje5;
+						totalsal=totalsal+arrayAlimentos.get(i).getSal()*cantidadPorcentaje5;
+						totalcalorias=totalcalorias+arrayAlimentos.get(i).getCalorias()*cantidadPorcentaje5;
+						break;}
+						else {
+							break;
+						}}
+						
+				}
+				
 			textFieldTotalGrasas.setText(String.valueOf(totalgrasas));
 			textFieldTotalAzucar.setText(String.valueOf(totalazucar));
 			textFieldTotalSal.setText(String.valueOf(totalsal));
@@ -575,19 +630,31 @@ public class VentanaDonet {
 					
 					lblTotalGrasas.setForeground(Color.red);
 				}
+				else {
+					lblTotalGrasas.setForeground(Color.black);
+				}
 				
 				if (totalazucar>=totalcalorias*10/100) {
 					
 					lblTotalAzucar.setForeground(Color.red);
+				}
+				else {
+					lblTotalAzucar.setForeground(Color.black);
 				}
 				
 				if (totalsal>=5) {
 					
 					lblTotalSal.setForeground(Color.red);
 				}
+				else {
+					lblTotalSal.setForeground(Color.black);
+				}
 				
 				if (totalcaloriasrecomendadas>totalcalorias) {
 					lblTotalCalorias.setForeground(Color.red);
+				}
+				else {
+					lblTotalCalorias.setForeground(Color.black);
 				}
 				
 			}
@@ -791,22 +858,38 @@ public class VentanaDonet {
 		
 		JButton btnAnadir = new JButton("Añadir");
 		btnAnadir.addMouseListener(new MouseAdapter() {
+			
+			public void crearAlimento() {
+				if (Double.valueOf(textFieldGrasasAñadir.getText())<Double.valueOf(textFieldGrasasSaturadasAñadir.getText())){
+					System.out.println("ERROR");
+				}
+				else {
+					arrayAlimentos.add(new Alimentos(textFieldNombreAñadir.getText(),Double.valueOf(textFieldGrasasAñadir.getText()),Double.valueOf(textFieldGrasasSaturadasAñadir.getText()),Double.valueOf(textFieldHidratosAñadir.getText()),Double.valueOf(textFieldAzucarAñadir.getText()),Double.valueOf(textFieldProteinasAñadir.getText()),Double.valueOf(textFieldSalAñadir.getText()),Integer.valueOf(textFieldCaloriasAñadir.getText()),100));
+				}
+				
+				
+			}
+			
+			public void recogerDatosNuevoAlimento(int i) {
+				lblNombrSextoAlimento.setText((String.valueOf(arrayAlimentos.get(i).getNombre())));
+				lblGrasasSextoAlimento.setText((String.valueOf(arrayAlimentos.get(i).getGrasas())));
+				lblSaturadasSextoAlimento.setText((String.valueOf(arrayAlimentos.get(i).getGrasasSaturadas())));
+				lblHidratosSextoAlimento.setText((String.valueOf(arrayAlimentos.get(i).getHidratos())));
+				lblAzucarSextoAlimento.setText((String.valueOf(arrayAlimentos.get(i).getAzucar())));
+				lblProteinasSextoAlimento.setText((String.valueOf(arrayAlimentos.get(i).getProteinas())));
+				lblSalSextoAlimento.setText((String.valueOf(arrayAlimentos.get(i).getSal())));
+				lblCaloriasSextoAlimento.setText((String.valueOf(arrayAlimentos.get(i).getCalorias())));
+			}
+			
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if (arrayAlimentos.size()<8) {
-					arrayAlimentos.add(new Alimentos(textFieldNombreAñadir.getText(),Double.valueOf(textFieldGrasasAñadir.getText()),Double.valueOf(textFieldGrasasSaturadasAñadir.getText()),Double.valueOf(textFieldHidratosAñadir.getText()),Double.valueOf(textFieldAzucarAñadir.getText()),Double.valueOf(textFieldProteinasAñadir.getText()),Double.valueOf(textFieldSalAñadir.getText()),Integer.valueOf(textFieldCaloriasAñadir.getText()),100));
+				this.crearAlimento();
 				}
 				
 					
 				if (lblNombrSextoAlimento.getText().equals("")) {
-				lblNombrSextoAlimento.setText((String.valueOf(arrayAlimentos.get(5).getNombre())));
-				lblGrasasSextoAlimento.setText((String.valueOf(arrayAlimentos.get(5).getGrasas())));
-				lblSaturadasSextoAlimento.setText((String.valueOf(arrayAlimentos.get(5).getGrasasSaturadas())));
-				lblHidratosSextoAlimento.setText((String.valueOf(arrayAlimentos.get(5).getHidratos())));
-				lblAzucarSextoAlimento.setText((String.valueOf(arrayAlimentos.get(5).getAzucar())));
-				lblProteinasSextoAlimento.setText((String.valueOf(arrayAlimentos.get(5).getProteinas())));
-				lblSalSextoAlimento.setText((String.valueOf(arrayAlimentos.get(5).getSal())));
-				lblCaloriasSextoAlimento.setText((String.valueOf(arrayAlimentos.get(5).getCalorias())));
+				this.recogerDatosNuevoAlimento(5);
 				}
 				
 				else if (lblNombrSextoAlimento.getText().equals((String.valueOf(arrayAlimentos.get(5).getNombre())))&& lblNombrSeptimoAlimento.getText().equals("")) {

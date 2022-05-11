@@ -80,6 +80,7 @@ public class Alimentos {
 	public void setHidratos(double hidratos) {
 		this.hidratos = hidratos;
 	}
+	
 
 	public void setAzucar(double azucar) {
 		this.azucar = azucar;
