@@ -41,18 +41,18 @@ public class VentanaDonet {
 	private JTextField textFieldTotalGrasas;
 	private JTextField textFieldTotalAzucar;
 	private JTextField textFieldTotalSal;
-	private JTextField textFieldNombreAñadir;
-	private JTextField textFieldGrasasAñadir;
-	private JTextField textFieldGrasasSaturadasAñadir;
-	private JTextField textFieldHidratosAñadir;
-	private JTextField textFieldAzucarAñadir;
-	private JTextField textFieldProteinasAñadir;
-	private JTextField textFieldSalAñadir;
-	private JTextField textFieldCaloriasAñadir;
+	private JTextField textFieldNombreA�adir;
+	private JTextField textFieldGrasasA�adir;
+	private JTextField textFieldGrasasSaturadasA�adir;
+	private JTextField textFieldHidratosA�adir;
+	private JTextField textFieldAzucarA�adir;
+	private JTextField textFieldProteinasA�adir;
+	private JTextField textFieldSalA�adir;
+	private JTextField textFieldCaloriasA�adir;
 	private JTextField textFieldEdad;
 	private JTextField txtFieldPeso;
 	private JTextField textFieldAltura;
-	private JTextField textFieldCantidadAñadir;
+	private JTextField textFieldCantidadA�adir;
 
 	/**
 	 * Launch the application.
@@ -88,7 +88,7 @@ public class VentanaDonet {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		/**
-		 * Se inicializa el Array y le añadimos los objetos con sus respectivos datos
+		 * Se inicializa el Array y le a�adimos los objetos con sus respectivos datos
 		 */
 		
 		ArrayList<Alimento> arrayAlimentos=new ArrayList<Alimento>();
@@ -638,72 +638,72 @@ public class VentanaDonet {
 		
 		JLabel lblCaloriasOctavoAlimento = new JLabel("");
 		
-		JLabel lblTextoAñadirAlimentos = new JLabel("Añade más alimentos si es necesario:");
+		JLabel lblTextoA�adirAlimentos = new JLabel("Añade más alimentos si es necesario:");
 		
-		JLabel lblNombreAñadir = new JLabel("Nombre");
+		JLabel lblNombreA�adir = new JLabel("Nombre");
 		
-		JLabel lblGrasasAñadir = new JLabel("Grasas");
+		JLabel lblGrasasA�adir = new JLabel("Grasas");
 		
-		JLabel lblSaturadasAñadir = new JLabel("Saturadas");
+		JLabel lblSaturadasA�adir = new JLabel("Saturadas");
 		
-		JLabel lblHidratosAñadir = new JLabel("Hidratos");
+		JLabel lblHidratosA�adir = new JLabel("Hidratos");
 		
-		JLabel lblAzucarAñadir = new JLabel("Azucar");
+		JLabel lblAzucarA�adir = new JLabel("Azucar");
 		
-		JLabel lblProteinasAñadir = new JLabel("Proteinas");
-		lblProteinasAñadir.setForeground(Color.BLACK);
+		JLabel lblProteinasA�adir = new JLabel("Proteinas");
+		lblProteinasA�adir.setForeground(Color.BLACK);
 		
-		JLabel lblSalAñadir = new JLabel("Sal");
+		JLabel lblSalA�adir = new JLabel("Sal");
 		
-		JLabel lblCaloriasAñadir = new JLabel("Calorias");
+		JLabel lblCaloriasA�adir = new JLabel("Calorias");
 		
 
-		JLabel lblCantidadAñadir = new JLabel("Cantidad");
+		JLabel lblCantidadA�adir = new JLabel("Cantidad");
 		
-		JLabel lblErrorAñadir = new JLabel("");
-		lblErrorAñadir.setForeground(Color.RED);
+		JLabel lblErrorA�adir = new JLabel("");
+		lblErrorA�adir.setForeground(Color.RED);
 		
-		textFieldCantidadAñadir = new JTextField();
-		textFieldCantidadAñadir.setColumns(10);
+		textFieldCantidadA�adir = new JTextField();
+		textFieldCantidadA�adir.setColumns(10);
 		
-		textFieldNombreAñadir = new JTextField();
-		textFieldNombreAñadir.setColumns(10);
+		textFieldNombreA�adir = new JTextField();
+		textFieldNombreA�adir.setColumns(10);
 		
-		textFieldGrasasAñadir = new JTextField();
-		textFieldGrasasAñadir.setColumns(10);
+		textFieldGrasasA�adir = new JTextField();
+		textFieldGrasasA�adir.setColumns(10);
 		
-		textFieldGrasasSaturadasAñadir = new JTextField();
-		textFieldGrasasSaturadasAñadir.setColumns(10);
+		textFieldGrasasSaturadasA�adir = new JTextField();
+		textFieldGrasasSaturadasA�adir.setColumns(10);
 		
-		textFieldHidratosAñadir = new JTextField();
-		textFieldHidratosAñadir.setColumns(10);
+		textFieldHidratosA�adir = new JTextField();
+		textFieldHidratosA�adir.setColumns(10);
 		
-		textFieldAzucarAñadir = new JTextField();
-		textFieldAzucarAñadir.setColumns(10);
+		textFieldAzucarA�adir = new JTextField();
+		textFieldAzucarA�adir.setColumns(10);
 		
-		textFieldProteinasAñadir = new JTextField();
-		textFieldProteinasAñadir.setColumns(10);
+		textFieldProteinasA�adir = new JTextField();
+		textFieldProteinasA�adir.setColumns(10);
 		
-		textFieldSalAñadir = new JTextField();
-		textFieldSalAñadir.setColumns(10);
+		textFieldSalA�adir = new JTextField();
+		textFieldSalA�adir.setColumns(10);
 		
-		textFieldCaloriasAñadir = new JTextField();
-		textFieldCaloriasAñadir.setColumns(10);
+		textFieldCaloriasA�adir = new JTextField();
+		textFieldCaloriasA�adir.setColumns(10);
 		/**
-		 * Este botón borra todos los elementos escritos en los textArea de la zona añadir para que el usuario pueda volver a escribir nuevos datos en dichos textArea
+		 * Este botón borra todos los elementos escritos en los textArea de la zona a�adir para que el usuario pueda volver a escribir nuevos datos en dichos textArea
 		 */
 		JButton btnReset = new JButton("Reset");
 		btnReset.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				textFieldNombreAñadir.setText("");
-				textFieldGrasasAñadir.setText("");
-				textFieldGrasasSaturadasAñadir.setText("");
-				textFieldHidratosAñadir.setText("");
-				textFieldAzucarAñadir.setText("");
-				textFieldProteinasAñadir.setText("");
-				textFieldSalAñadir.setText("");
-				textFieldCaloriasAñadir.setText("");
+				textFieldNombreA�adir.setText("");
+				textFieldGrasasA�adir.setText("");
+				textFieldGrasasSaturadasA�adir.setText("");
+				textFieldHidratosA�adir.setText("");
+				textFieldAzucarA�adir.setText("");
+				textFieldProteinasA�adir.setText("");
+				textFieldSalA�adir.setText("");
+				textFieldCaloriasA�adir.setText("");
 			}
 		});
 		
@@ -718,12 +718,12 @@ public class VentanaDonet {
 			 * @author Alejandro Donet Montesinos
 			 */
 			public void crearAlimento() {
-				if (Double.valueOf(textFieldGrasasAñadir.getText())<Double.valueOf(textFieldGrasasSaturadasAñadir.getText())){
-					lblErrorAñadir.setText("ERROR: Las grasas saturadas no pueden ser mayores que las grasas normales.");;
+				if (Double.valueOf(textFieldGrasasA�adir.getText())<Double.valueOf(textFieldGrasasSaturadasA�adir.getText())){
+					lblErrorA�adir.setText("ERROR: Las grasas saturadas no pueden ser mayores que las grasas normales.");;
 				}
 				else {
-					arrayAlimentos.add(new Alimento(textFieldNombreAñadir.getText(),Double.valueOf(textFieldGrasasAñadir.getText()),Double.valueOf(textFieldGrasasSaturadasAñadir.getText()),Double.valueOf(textFieldHidratosAñadir.getText()),Double.valueOf(textFieldAzucarAñadir.getText()),Double.valueOf(textFieldProteinasAñadir.getText()),Double.valueOf(textFieldSalAñadir.getText()),Integer.valueOf(textFieldCaloriasAñadir.getText()),Integer.valueOf(textFieldCantidadAñadir.getText())));
-					lblErrorAñadir.setText("");;
+					arrayAlimentos.add(new Alimento(textFieldNombreA�adir.getText(),Double.valueOf(textFieldGrasasA�adir.getText()),Double.valueOf(textFieldGrasasSaturadasA�adir.getText()),Double.valueOf(textFieldHidratosA�adir.getText()),Double.valueOf(textFieldAzucarA�adir.getText()),Double.valueOf(textFieldProteinasA�adir.getText()),Double.valueOf(textFieldSalA�adir.getText()),Integer.valueOf(textFieldCaloriasA�adir.getText()),Integer.valueOf(textFieldCantidadA�adir.getText())));
+					lblErrorA�adir.setText("");;
 				}
 				
 				
@@ -981,45 +981,45 @@ public class VentanaDonet {
 							.addComponent(btnCalcular, GroupLayout.PREFERRED_SIZE, 105, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(69)
-							.addComponent(lblTextoAñadirAlimentos, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE))
+							.addComponent(lblTextoA�adirAlimentos, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(79)
-							.addComponent(lblNombreAñadir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+							.addComponent(lblNombreA�adir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
 							.addGap(26)
-							.addComponent(lblGrasasAñadir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+							.addComponent(lblGrasasA�adir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
 							.addGap(12)
-							.addComponent(lblSaturadasAñadir)
+							.addComponent(lblSaturadasA�adir)
 							.addGap(27)
-							.addComponent(lblHidratosAñadir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+							.addComponent(lblHidratosA�adir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
 							.addGap(24)
-							.addComponent(lblAzucarAñadir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+							.addComponent(lblAzucarA�adir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
 							.addGap(12)
-							.addComponent(lblProteinasAñadir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+							.addComponent(lblProteinasA�adir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
 							.addGap(44)
-							.addComponent(lblSalAñadir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+							.addComponent(lblSalA�adir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
 							.addGap(5)
-							.addComponent(lblCaloriasAñadir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+							.addComponent(lblCaloriasA�adir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
 							.addGap(21)
-							.addComponent(lblCantidadAñadir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE))
+							.addComponent(lblCantidadA�adir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(79)
-							.addComponent(textFieldNombreAñadir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+							.addComponent(textFieldNombreA�adir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
 							.addGap(26)
-							.addComponent(textFieldGrasasAñadir, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+							.addComponent(textFieldGrasasA�adir, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
 							.addGap(22)
-							.addComponent(textFieldGrasasSaturadasAñadir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+							.addComponent(textFieldGrasasSaturadasA�adir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
 							.addGap(27)
-							.addComponent(textFieldHidratosAñadir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+							.addComponent(textFieldHidratosA�adir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
 							.addGap(24)
-							.addComponent(textFieldAzucarAñadir, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
+							.addComponent(textFieldAzucarA�adir, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
 							.addGap(31)
-							.addComponent(textFieldProteinasAñadir, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+							.addComponent(textFieldProteinasA�adir, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
 							.addGap(54)
-							.addComponent(textFieldSalAñadir, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+							.addComponent(textFieldSalA�adir, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
 							.addGap(15)
-							.addComponent(textFieldCaloriasAñadir, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+							.addComponent(textFieldCaloriasA�adir, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
 							.addGap(31)
-							.addComponent(textFieldCantidadAñadir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+							.addComponent(textFieldCantidadA�adir, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
 							.addGap(55)
 							.addComponent(btnReset, GroupLayout.PREFERRED_SIZE, 105, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
@@ -1027,7 +1027,7 @@ public class VentanaDonet {
 							.addComponent(btnAnadir, GroupLayout.PREFERRED_SIZE, 105, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(26)
-							.addComponent(lblErrorAñadir, GroupLayout.PREFERRED_SIZE, 564, GroupLayout.PREFERRED_SIZE))
+							.addComponent(lblErrorA�adir, GroupLayout.PREFERRED_SIZE, 564, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 								.addGroup(groupLayout.createSequentialGroup()
@@ -1330,54 +1330,54 @@ public class VentanaDonet {
 					.addGap(38)
 					.addComponent(btnCalcular)
 					.addGap(77)
-					.addComponent(lblTextoAñadirAlimentos)
+					.addComponent(lblTextoA�adirAlimentos)
 					.addGap(26)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblNombreAñadir)
+						.addComponent(lblNombreA�adir)
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(1)
-							.addComponent(lblGrasasAñadir))
-						.addComponent(lblSaturadasAñadir)
-						.addComponent(lblHidratosAñadir)
-						.addComponent(lblAzucarAñadir)
-						.addComponent(lblProteinasAñadir)
-						.addComponent(lblSalAñadir)
-						.addComponent(lblCaloriasAñadir)
-						.addComponent(lblCantidadAñadir))
+							.addComponent(lblGrasasA�adir))
+						.addComponent(lblSaturadasA�adir)
+						.addComponent(lblHidratosA�adir)
+						.addComponent(lblAzucarA�adir)
+						.addComponent(lblProteinasA�adir)
+						.addComponent(lblSalA�adir)
+						.addComponent(lblCaloriasA�adir)
+						.addComponent(lblCantidadA�adir))
 					.addGap(17)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(3)
-							.addComponent(textFieldNombreAñadir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addComponent(textFieldNombreA�adir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(3)
-							.addComponent(textFieldGrasasAñadir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addComponent(textFieldGrasasA�adir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(3)
-							.addComponent(textFieldGrasasSaturadasAñadir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addComponent(textFieldGrasasSaturadasA�adir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(3)
-							.addComponent(textFieldHidratosAñadir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addComponent(textFieldHidratosA�adir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(3)
-							.addComponent(textFieldAzucarAñadir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addComponent(textFieldAzucarA�adir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(3)
-							.addComponent(textFieldProteinasAñadir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addComponent(textFieldProteinasA�adir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(3)
-							.addComponent(textFieldSalAñadir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addComponent(textFieldSalA�adir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(3)
-							.addComponent(textFieldCaloriasAñadir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addComponent(textFieldCaloriasA�adir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(3)
-							.addComponent(textFieldCantidadAñadir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addComponent(textFieldCantidadA�adir, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addComponent(btnReset))
 					.addGap(18)
 					.addComponent(btnAnadir)
 					.addGap(3)
-					.addComponent(lblErrorAñadir, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
+					.addComponent(lblErrorA�adir, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
 		);
 		frame.getContentPane().setLayout(groupLayout);
 								
